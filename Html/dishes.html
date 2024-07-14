@@ -11,10 +11,14 @@
     <body>
         <header>
             <h1>🍔MENU CARD</h1>
+        <nav aria-label="navigator">
+           <h3 class="home" ><a href="index.html">Home</a></h3>
+           <h3 class="about"><a href="about.html">About</a></h3>
+        </nav>
         </header>
         <div class="menu">
             <p>🍽️indian Foods</p>
-            <table border="1">
+            <table class="Indian foods" border="1">
                 <tr>
                     <th>Food item</th>
                     <th>Price(INR)</th>
@@ -37,7 +41,7 @@
                 </tr>
             </table>
             <p>🍽️Chinese foods</p>
-            <table border="1">
+            <table class="chinese foods" border="1">
                 <tr>
                     <th>Food item</th>
                     <th>Price(INR)</th>
@@ -60,7 +64,7 @@
                 </tr>
                 </table>
                 <p>🍽️American Foods</p>
-                <table border="1">
+                <table class="American Foods" border="1">
                     <tr>
                         <th>Food item</th>
                         <th>Price(INR)</th>
@@ -83,7 +87,7 @@
                     </tr>
                     </table>
                     <p>🍽️Burmese Foods</p>
-                    <table border="1">
+                    <table class="burmese foods" border="1">
                         <tr>
                             <th>Food item</th>
                             <th>Price(INR)</th>
@@ -105,6 +109,40 @@
                             <td><button>Order</button></td>
                         </tr>
                         </table>
+                        <script>
+                            document.addEventListener("DOMcontentLoaded",function(){
+                                if(window.location.hash === ".Indian foods"){
+                                    const target= document.querySelector(".Indian foods");
+                                    if(target){
+                                        target.scrollIntoView();
+                                    }
+                                }
+                            });
+                            document.addEventListener("DOMcontentLoaded",function(){
+                                if(window.location.hash === ".chinese foods"){
+                                    const target= document.querySelector(".chinese foods");
+                                    if(target){
+                                        target.scrollIntoView();
+                                    }
+                                }
+                            });
+                            document.addEventListener("DOMcontentLoaded",function(){
+                                if(window.location.hash === ".American foods"){
+                                    const target= document.querySelector(".American foods");
+                                    if(target){
+                                        target.scrollIntoView();
+                                    }
+                                }
+                            });
+                            document.addEventListener("DOMcontentLoaded",function(){
+                                if(window.location.hash === ".burmese foods"){
+                                    const target= document.querySelector(".burmese foods");
+                                    if(target){
+                                        target.scrollIntoView();
+                                    }
+                                }
+                            });
+                        </script>
             
         </div>
         <footer>
